@@ -57,6 +57,6 @@ jobs:
       # Creacion del tercer step - Variables de entorno secretas 
       - name: Variables de entorno secretas 
         run: |
-          echo "El usuario es: ${{env.USER}}"
-          echo "El password es: ${{env.PASSWORD}}"
+          echo "El usuario es: ${{env.user}}"
+          echo "El password es: ${{env.password}}"
           
