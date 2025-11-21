@@ -22,6 +22,9 @@ jobs:
       nombres: Mersi
       apellidos: Dueñas Estrada
       edad: 29
+      
+      user: ${{secrets.USER}}
+      password: ${{secrets.PASSWORD}}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -44,9 +47,16 @@ jobs:
           echo "Nombres : $nombres",
           echo "Apellidos : $apellidos",
           echo "Edad : $edad".
+          
       
       # Creacion del segundo step - Datos Generales
       - name: Datos Generales
         run: |
           echo "carrera de Ingenieria de Sistemas".
+
+      # Creacion del tercer step - Variables de entorno secretas 
+      - name: Variables de entorno secretas 
+        run: |
+          echo "El usuario es: ${{env.USER}}"
+          echo "El password es: ${{env.PASSWORD}}"
           
