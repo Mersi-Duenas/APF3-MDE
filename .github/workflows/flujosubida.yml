@@ -41,7 +41,7 @@ jobs:
       # Creacion del primer step - Presentacion
       - name: Presentacion
         run: |
-          echo "Nombres : $nombre",
+          echo "Nombres : $nombres",
           echo "Apellidos : $apellidos",
           echo "Edad : $edad".
         
